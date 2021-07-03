@@ -1,0 +1,30 @@
+{
+  "status": "0",
+  "msg": "",
+  "result": [
+    {
+      "productId": "100001",
+      "productName": "小米音箱",
+      "productPrice": 2499.00,
+      "productImg": "1.jpg"
+    },
+    {
+      "productId": "100002",
+      "productName": "蓝牙耳机",
+      "productPrice": 249.00,
+      "productImg": "2.jpg"
+    },
+    {
+      "productId": "100003",
+      "productName": "头戴式耳机",
+      "productPrice": 299.00,
+      "productImg": "3.jpg"
+    },
+    {
+      "productId": "100004",
+      "productName": "小米耳机",
+      "productPrice": 2990.00,
+      "productImg": "4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+server:
+  port: 8086
+  servlet:
+    context-path: /user
+
+
+sso-oauth2:
+  # oauth2 sso client 配置参数
+  #应用id CLIENT_ID
+  clientId: client_001
+  #应用secret
+  clientSecret: 123456
+  #获取授权地址
+  oauthServerUrl: http://localhost:8082/sso/oauth/authorize
+  #获取ACCESS_TOKEN换取地址
+  oauthServerTokenUrl: http://localhost:8082/sso/oauth/token
+  #应用的回调地址
+  oauthServerRedirectUri: http://localhost:8088/
+  #获取用户信息接口地址
+  oauthServiceApi: http://localhost:8082/sso/session/getUserInfo
+  #用户帐户同步 user
+  bimRemoteUser: test
+  bimRemotePwd: 123456
+  #同步用户默认appid 和默认权限
+  appId: fdac4087c2f10000816cca8af4cd243b
+  rolePermissions:
+    - 5cade8a1ee3c4d9999332ae390d560ab
+    - 56d3956cc68a488222258d7a3a253a31

@@ -1,0 +1,48 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /sso
+    session:
+      timeout: 3600
+
+#spring:
+#  freemarker:
+#    charset: UTF-8
+#    suffix: .html
+#    content-type: text/html; charset=utf-8
+#    template-loader-path: classpath:/templates
+#    request-context-attribute: request
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ssoAuth
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      show-sql: true
+  #thymeleaf:
+  #  enabled: true  #开启thymeleaf视图解析
+  #  encoding: utf-8  #编码
+  #  prefix: classpath:/templates/  #前缀
+  #  cache: false  #是否使用缓存
+  #  mode: HTML  #严格的HTML语法模式
+    #suffix: .html  #后缀名
+  redis:
+    #哨兵模式，需要redis 服务启动相应的sentinel 服务
+    sentinel:
+      master: local-master
+      nodes:
+        - 192.168.0.118:26380
+        - 192.168.0.118:26381
+        - 192.168.0.118:26382
+      password: 123456
+    ## 连接超时时间（毫秒）
+    timeout: 30000
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 128 #最大活跃链接数 默认8
+        max-wait: -1 #最大等待时间（使用负值表示没有限制）
+        max-idle: 64 # 最大空闲连接数 默认8
+        min-idle: 32 #最小空闲连接数 默认0
+      shutdown-timeout: 100 # 关闭超时时间
