@@ -29,6 +29,6 @@
 
 3、启动应用后端服务（gallop-user-center）
 
-4、启动应用前端服务（gallop-user-center），命令 npm run dev
+4、启动应用前端服务（gallop-vue-demo），命令 npm run dev
 
 5、从打印日志及浏览器控制台可以查看单点登录获取的相关数据及token
